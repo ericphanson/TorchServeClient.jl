@@ -130,7 +130,7 @@
     "/v1/models/{model_name}:predict": {
       "post": {
         "description": "Predictions entry point to get inference using default model version.",
-        "operationId": "predictions",
+        "operationId": "predictions_v1",
         "parameters": [
           {
             "in": "path",
@@ -259,7 +259,7 @@
     "/v2/models/{model_name}/infer": {
       "post": {
         "description": "Predictions entry point to get inference using default model version.",
-        "operationId": "predictions",
+        "operationId": "predictions_v2",
         "parameters": [
           {
             "in": "path",

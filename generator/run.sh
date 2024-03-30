@@ -2,5 +2,4 @@ docker run --rm -v "${PWD}/..:/local" openapitools/openapi-generator-cli generat
     -i /local/generator/pytorch-serve.json \
     -g julia-client \
     -c /local/generator/config.json \
-    -o /local \
-    --skip-validate-spec
+    -o /local 
