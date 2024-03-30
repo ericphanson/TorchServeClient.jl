@@ -8,9 +8,9 @@ Method | HTTP request | Description
 [**api_description_0**](DefaultApi.md#api_description_0) | **GET** /api-description | 
 [**metrics**](DefaultApi.md#metrics) | **GET** /metrics | 
 [**ping**](DefaultApi.md#ping) | **GET** /ping | 
-[**predictions**](DefaultApi.md#predictions) | **POST** /v1/models/{model_name}:predict | 
-[**predictions_0**](DefaultApi.md#predictions_0) | **POST** /v2/models/{model_name}/infer | 
-[**predictions_1**](DefaultApi.md#predictions_1) | **POST** /predictions/{model_name} | 
+[**predictions**](DefaultApi.md#predictions) | **POST** /predictions/{model_name} | 
+[**predictions_v1**](DefaultApi.md#predictions_v1) | **POST** /v1/models/{model_name}:predict | 
+[**predictions_v2**](DefaultApi.md#predictions_v2) | **POST** /v2/models/{model_name}/infer | 
 [**version_predictions**](DefaultApi.md#version_predictions) | **POST** /predictions/{model_name}/{model_version} | 
 
 
@@ -158,9 +158,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
-# **predictions_0**
-> predictions_0(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
-> predictions_0(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
+# **predictions_v1**
+> predictions_v1(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
+> predictions_v1(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
 
 
 
@@ -189,9 +189,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
-# **predictions_1**
-> predictions_1(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
-> predictions_1(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
+# **predictions_v2**
+> predictions_v2(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
+> predictions_v2(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
 
 
 
