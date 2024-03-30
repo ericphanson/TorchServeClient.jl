@@ -1,0 +1,14 @@
+.openapi-generator-ignore
+README.md
+docs/ApiDescription200Response.md
+docs/ApiDescription500Response.md
+docs/DefaultApi.md
+docs/Metrics200Response.md
+docs/Ping200Response.md
+src/TorchServeClient.jl
+src/apis/api_DefaultApi.jl
+src/modelincludes.jl
+src/models/model_ApiDescription200Response.jl
+src/models/model_ApiDescription500Response.jl
+src/models/model_Metrics200Response.jl
+src/models/model_Ping200Response.jl
