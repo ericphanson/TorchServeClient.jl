@@ -1,0 +1,9 @@
+name = "TorchServeClient"
+uuid = "b7b0e33c-570e-4cdd-8921-c82e2066ec13"
+authors = ["Eric Hanson <5846501+ericphanson@users.noreply.github.com>"]
+version = "0.10.0"
+
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+OpenAPI = "d5e62ea6-ddf3-4d43-8e4c-ad5e6c8bfd7d"
+TimeZones = "f269a46b-ccf7-5d73-abea-4c690281aa53"
