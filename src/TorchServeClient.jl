@@ -3,7 +3,7 @@
 
 module TorchServeClient
 
-using Dates, TimeZones
+using Dates
 using OpenAPI
 using OpenAPI.Clients
 

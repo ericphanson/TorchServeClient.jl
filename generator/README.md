@@ -9,3 +9,5 @@ Then I modified the `operationIDs` to be unique (https://github.com/pytorch/serv
 Then run `run.sh` to generate the client.
 
 This was done on March 31, 2024.
+
+Then I find-and-replaced to change all `body::String` to `body`, since the type annotation prevents uploading non-string data (which is essential). I also removed the unused TimeZones dependency.

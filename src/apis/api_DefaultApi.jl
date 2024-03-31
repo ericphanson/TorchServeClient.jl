@@ -132,7 +132,7 @@ const _returntypes_predictions_DefaultApi = Dict{Regex,Type}(
     Regex("^" * replace("503", "x"=>".") * "\$") => ApiDescription500Response,
 )
 
-function _oacinternal_predictions(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing)
+function _oacinternal_predictions(_api::DefaultApi, model_name::String, body; _mediaType=nothing)
     _ctx = OpenAPI.Clients.Ctx(_api.client, "POST", _returntypes_predictions_DefaultApi, "/predictions/{model_name}", [], body)
     OpenAPI.Clients.set_param(_ctx.path, "model_name", model_name)  # type String
     OpenAPI.Clients.set_header_accept(_ctx, ["*/*", "application/json", ])
@@ -144,16 +144,16 @@ end
 
 Params:
 - model_name::String (required)
-- body::String (required)
+- body (required)
 
 Return: String, OpenAPI.Clients.ApiResponse
 """
-function predictions(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing)
+function predictions(_api::DefaultApi, model_name::String, body; _mediaType=nothing)
     _ctx = _oacinternal_predictions(_api, model_name, body; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx)
 end
 
-function predictions(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing)
+function predictions(_api::DefaultApi, response_stream::Channel, model_name::String, body; _mediaType=nothing)
     _ctx = _oacinternal_predictions(_api, model_name, body; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx, response_stream)
 end
@@ -165,7 +165,7 @@ const _returntypes_predictions_v1_DefaultApi = Dict{Regex,Type}(
     Regex("^" * replace("503", "x"=>".") * "\$") => ApiDescription500Response,
 )
 
-function _oacinternal_predictions_v1(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing)
+function _oacinternal_predictions_v1(_api::DefaultApi, model_name::String, body; _mediaType=nothing)
     _ctx = OpenAPI.Clients.Ctx(_api.client, "POST", _returntypes_predictions_v1_DefaultApi, "/v1/models/{model_name}:predict", [], body)
     OpenAPI.Clients.set_param(_ctx.path, "model_name", model_name)  # type String
     OpenAPI.Clients.set_header_accept(_ctx, ["*/*", "application/json", ])
@@ -177,16 +177,16 @@ end
 
 Params:
 - model_name::String (required)
-- body::String (required)
+- body (required)
 
 Return: String, OpenAPI.Clients.ApiResponse
 """
-function predictions_v1(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing)
+function predictions_v1(_api::DefaultApi, model_name::String, body; _mediaType=nothing)
     _ctx = _oacinternal_predictions_v1(_api, model_name, body; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx)
 end
 
-function predictions_v1(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing)
+function predictions_v1(_api::DefaultApi, response_stream::Channel, model_name::String, body; _mediaType=nothing)
     _ctx = _oacinternal_predictions_v1(_api, model_name, body; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx, response_stream)
 end
@@ -198,7 +198,7 @@ const _returntypes_predictions_v2_DefaultApi = Dict{Regex,Type}(
     Regex("^" * replace("503", "x"=>".") * "\$") => ApiDescription500Response,
 )
 
-function _oacinternal_predictions_v2(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing)
+function _oacinternal_predictions_v2(_api::DefaultApi, model_name::String, body; _mediaType=nothing)
     _ctx = OpenAPI.Clients.Ctx(_api.client, "POST", _returntypes_predictions_v2_DefaultApi, "/v2/models/{model_name}/infer", [], body)
     OpenAPI.Clients.set_param(_ctx.path, "model_name", model_name)  # type String
     OpenAPI.Clients.set_header_accept(_ctx, ["*/*", "application/json", ])
@@ -210,16 +210,16 @@ end
 
 Params:
 - model_name::String (required)
-- body::String (required)
+- body (required)
 
 Return: String, OpenAPI.Clients.ApiResponse
 """
-function predictions_v2(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing)
+function predictions_v2(_api::DefaultApi, model_name::String, body; _mediaType=nothing)
     _ctx = _oacinternal_predictions_v2(_api, model_name, body; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx)
 end
 
-function predictions_v2(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing)
+function predictions_v2(_api::DefaultApi, response_stream::Channel, model_name::String, body; _mediaType=nothing)
     _ctx = _oacinternal_predictions_v2(_api, model_name, body; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx, response_stream)
 end
@@ -231,7 +231,7 @@ const _returntypes_version_predictions_DefaultApi = Dict{Regex,Type}(
     Regex("^" * replace("503", "x"=>".") * "\$") => ApiDescription500Response,
 )
 
-function _oacinternal_version_predictions(_api::DefaultApi, model_name::String, model_version::String, body::String; _mediaType=nothing)
+function _oacinternal_version_predictions(_api::DefaultApi, model_name::String, model_version::String, body; _mediaType=nothing)
     _ctx = OpenAPI.Clients.Ctx(_api.client, "POST", _returntypes_version_predictions_DefaultApi, "/predictions/{model_name}/{model_version}", [], body)
     OpenAPI.Clients.set_param(_ctx.path, "model_name", model_name)  # type String
     OpenAPI.Clients.set_param(_ctx.path, "model_version", model_version)  # type String
@@ -245,16 +245,16 @@ end
 Params:
 - model_name::String (required)
 - model_version::String (required)
-- body::String (required)
+- body (required)
 
 Return: String, OpenAPI.Clients.ApiResponse
 """
-function version_predictions(_api::DefaultApi, model_name::String, model_version::String, body::String; _mediaType=nothing)
+function version_predictions(_api::DefaultApi, model_name::String, model_version::String, body; _mediaType=nothing)
     _ctx = _oacinternal_version_predictions(_api, model_name, model_version, body; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx)
 end
 
-function version_predictions(_api::DefaultApi, response_stream::Channel, model_name::String, model_version::String, body::String; _mediaType=nothing)
+function version_predictions(_api::DefaultApi, response_stream::Channel, model_name::String, model_version::String, body; _mediaType=nothing)
     _ctx = _oacinternal_version_predictions(_api, model_name, model_version, body; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx, response_stream)
 end

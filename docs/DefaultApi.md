@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**api_description**](DefaultApi.md#api_description) | **OPTIONS** / | 
-[**api_description_0**](DefaultApi.md#api_description_0) | **GET** /api-description | 
-[**metrics**](DefaultApi.md#metrics) | **GET** /metrics | 
-[**ping**](DefaultApi.md#ping) | **GET** /ping | 
-[**predictions**](DefaultApi.md#predictions) | **POST** /predictions/{model_name} | 
-[**predictions_v1**](DefaultApi.md#predictions_v1) | **POST** /v1/models/{model_name}:predict | 
-[**predictions_v2**](DefaultApi.md#predictions_v2) | **POST** /v2/models/{model_name}/infer | 
-[**version_predictions**](DefaultApi.md#version_predictions) | **POST** /predictions/{model_name}/{model_version} | 
+[**api_description**](DefaultApi.md#api_description) | **OPTIONS** / |
+[**api_description_0**](DefaultApi.md#api_description_0) | **GET** /api-description |
+[**metrics**](DefaultApi.md#metrics) | **GET** /metrics |
+[**ping**](DefaultApi.md#ping) | **GET** /ping |
+[**predictions**](DefaultApi.md#predictions) | **POST** /predictions/{model_name} |
+[**predictions_v1**](DefaultApi.md#predictions_v1) | **POST** /v1/models/{model_name}:predict |
+[**predictions_v2**](DefaultApi.md#predictions_v2) | **POST** /v2/models/{model_name}/infer |
+[**version_predictions**](DefaultApi.md#version_predictions) | **POST** /predictions/{model_name}/{model_version} |
 
 
 # **api_description**
@@ -78,7 +78,7 @@ Get TorchServe application metrics in prometheus format.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_api** | **DefaultApi** | API context | 
+ **_api** | **DefaultApi** | API context |
 
 ### Optional Parameters
 
@@ -128,8 +128,8 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 # **predictions**
-> predictions(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
-> predictions(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
+> predictions(_api::DefaultApi, model_name::String, body; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
+> predictions(_api::DefaultApi, response_stream::Channel, model_name::String, body; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
 
 
 
@@ -139,9 +139,9 @@ Predictions entry point to get inference using default model version.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_api** | **DefaultApi** | API context | 
+ **_api** | **DefaultApi** | API context |
 **model_name** | **String**| Name of model. | [default to nothing]
-**body** | **String****String**| Input data format is defined by each model. | 
+**body** | **String****String**| Input data format is defined by each model. |
 
 ### Return type
 
@@ -159,8 +159,8 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 # **predictions_v1**
-> predictions_v1(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
-> predictions_v1(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
+> predictions_v1(_api::DefaultApi, model_name::String, body; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
+> predictions_v1(_api::DefaultApi, response_stream::Channel, model_name::String, body; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
 
 
 
@@ -170,9 +170,9 @@ Predictions entry point to get inference using default model version.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_api** | **DefaultApi** | API context | 
+ **_api** | **DefaultApi** | API context |
 **model_name** | **String**| Name of model. | [default to nothing]
-**body** | **String****String**| Input data format is defined by each model. | 
+**body** | **String****String**| Input data format is defined by each model. |
 
 ### Return type
 
@@ -190,8 +190,8 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 # **predictions_v2**
-> predictions_v2(_api::DefaultApi, model_name::String, body::String; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
-> predictions_v2(_api::DefaultApi, response_stream::Channel, model_name::String, body::String; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
+> predictions_v2(_api::DefaultApi, model_name::String, body; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
+> predictions_v2(_api::DefaultApi, response_stream::Channel, model_name::String, body; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
 
 
 
@@ -201,9 +201,9 @@ Predictions entry point to get inference using default model version.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_api** | **DefaultApi** | API context | 
+ **_api** | **DefaultApi** | API context |
 **model_name** | **String**| Name of model. | [default to nothing]
-**body** | **String****String**| Input data format is defined by each model. | 
+**body** | **String****String**| Input data format is defined by each model. |
 
 ### Return type
 
@@ -221,8 +221,8 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 # **version_predictions**
-> version_predictions(_api::DefaultApi, model_name::String, model_version::String, body::String; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
-> version_predictions(_api::DefaultApi, response_stream::Channel, model_name::String, model_version::String, body::String; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
+> version_predictions(_api::DefaultApi, model_name::String, model_version::String, body; _mediaType=nothing) -> String, OpenAPI.Clients.ApiResponse <br/>
+> version_predictions(_api::DefaultApi, response_stream::Channel, model_name::String, model_version::String, body; _mediaType=nothing) -> Channel{ String }, OpenAPI.Clients.ApiResponse
 
 
 
@@ -232,10 +232,10 @@ Predictions entry point to get inference using specific model version.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **_api** | **DefaultApi** | API context | 
+ **_api** | **DefaultApi** | API context |
 **model_name** | **String**| Name of model. | [default to nothing]
 **model_version** | **String**| Name of model version. | [default to nothing]
-**body** | **String****String**| Input data format is defined by each model. | 
+**body** | **String****String**| Input data format is defined by each model. |
 
 ### Return type
 
@@ -251,4 +251,3 @@ No authorization required
  - **Accept**: */*, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
